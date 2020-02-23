@@ -1,0 +1,41 @@
+---
+title: "info 201 Data Report"
+author: "Yiu Chung Cheung"
+date: "2/21/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+
+## Summary Information
+Analyzing the 2018 Mass Shooting Data retrieved from <http://www.shootingtracker.com/>, a total of `r shootings_occured` shootings occured across the country in the given year, with a total of `r total_lives_lost` lives lost and `r total_injuries` injured. The city that was most impacted by mass shootings (by measuring the total number of deaths and injuries within the city) is `r city_most_impacted`, with `r num_city_most_impacted` reported victims (both dead or injured). The state with the most number of victims killed is `r state_most_num_killed`, with `r num_most_num_killed` victims reported dead. The state with the most number of victims wounded is `r state_most_num_injured`, with `r num_most_num_injured` victims reported injured. 
+
+## Summary Table
+Sorts the whole dataset and groups it by states where mass shootings occured in the given year, providing a brief summary about the number of deaths, injuries, and total victims.
+```{r data, echo=FALSE, comment=""}
+print.data.frame(summary_table)
+```
+
+## Description of a Particular Incident
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars, echo=FALSE}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
