@@ -1,6 +1,7 @@
 library(dplyr)
 library(lintr)
 library(styler)
+library(tidyr)
 library(leaflet)
 library(ggplot2)
 library(plotly)
@@ -76,7 +77,7 @@ summary_table <- total_victims_involved %>%
   summarise(
     Deaths = sum(num_killed),
     Injuries = sum(num_injured),
-    Total_Victims = sum(total_victims)
+    Total = sum(total_victims)
   )
 
 # particular incident (Thousand Oaks)
@@ -141,8 +142,7 @@ mass_shooting_in_months <- total_victims_involved %>%
 # creates a bar chart
 bar_chart <- ggplot(data = mass_shooting_in_months) +
   geom_col(mapping = aes(x = month, y = total_impact)) +
-  ggtitle("Total Numbers of Victims (Dead + Injured)
-          Impacted Each Month in Given Year") +
+  ggtitle("Total Victims (Dead + Injured) Impacted Each Month in Given Year") +
   scale_x_continuous(
     breaks = 1:12,
     labels = c(

@@ -18,6 +18,7 @@ Sorts the whole dataset and groups it by states where mass shootings occured in 
 ```{r data, echo=FALSE, comment=""}
 print.data.frame(summary_table)
 ```
+Out of the summary table, numerous mass shootings occured in 37 different states in 2018. It is easy to spot 3 extreme values in Total (impacted victims exceeds 100), with states California, Florida, and Illinois. 
 
 ## Description of a Particular Incident
 I decided to do some research on the "Thousand Oaks" incident that happened in `r state` located at `r address` on `r date`. There was a total number of `r impacted` victims impacted from this incident, with `r dead` reported dead and `r injured` reported injured. According to _The New York Times_, "The shooting inside the bar, a favorite local hangout for 25 years that hosted line-dancing lessons and allowed students in starting at 18, and where on Wednesday night several college women were celebrating their 21st birthdays, began around 11 p.m. Witnesses described sudden chaos. Among the estimated 130 to 180 people at the bar were five off-duty police officers, enjoying the night like the other partyers. As patrons dove for cover, the sounds of glass shattering and gunshots rang out in the cavernous bar. The gunman prowled the emptying dance floor, shooting the wounded as they lay on the ground". And as _USA Today_ stated, "The incident was also the deadliest mass shooting in the U.S. in 2018 since 17 classmates and teachers were gunned down at a Parkland, Florida, school on Valentine's Day".
@@ -42,4 +43,7 @@ From the interactive map, there were **more** mass shootings that happened on th
 
 `r new_bar_chart`
 
-I chose to use a **bar chart** to present my findings collected from the data because it helps visualize which month in the given year has mass shootings that involved most victims, dead or injured. In the bar chart, it is clear that most victims were affected by mass shootings happened in June 2018, with a total of 257 victims. It is also pretty easy to see that there tends to be more victims involved in mass shootings in 2018 during the summertime (between Jun and Sep), as those 4 months all had more numbers of victims impacted from mass shootings.
+Question: Which month in the given year has mass shootings that involved most victims? 
+
+
+I chose to use a **bar chart** to present my findings collected from the data because it is clear that my question can be easily answered with a bar chart, where most victims were affected by mass shootings happened in June 2018, with a total of 257 victims. It is also pretty easy to see that there tends to be more victims involved in mass shootings in 2018 during the summertime (Jun - Sep), as those 4 months all had more numbers of victims impacted from mass shootings.
