@@ -1,5 +1,5 @@
 ---
-title: "info 201 Data Report"
+title: "INFO 201 Data Report"
 author: "Yiu Chung Cheung"
 date: "2/21/2020"
 output: html_document
@@ -11,7 +11,7 @@ source("analysis.R")
 ```
 
 ## Summary Information
-Analyzing the 2018 Mass Shooting Data retrieved from <http://www.shootingtracker.com/>, a total of `r shootings_occured` shootings occured across the country in the given year, with a total of `r total_lives_lost` lives lost and `r total_injuries` injured. The city that was most impacted by mass shootings (by measuring the total number of deaths and injuries within the city) is `r city_most_impacted`, with `r num_city_most_impacted` reported victims (both dead or injured). The state with the most number of victims killed is `r state_most_num_killed`, with `r num_most_num_killed` victims reported dead. The state with the most number of victims wounded is `r state_most_num_injured`, with `r num_most_num_injured` victims reported injured. 
+Analyzing the Mass Shooting Data retrieved from <http://www.shootingtracker.com/>, a total of `r shootings_occured` shootings occured across the country in the given year, with a total of `r total_lives_lost` lives lost and `r total_injuries` injured. The city that was most impacted by mass shootings (by measuring the total number of deaths and injuries within the city) is `r city_most_impacted`, with `r num_city_most_impacted` reported victims (both dead or injured). The state with the most number of victims killed is `r state_most_num_killed`, with `r num_most_num_killed` victims reported dead. The state with the most number of victims wounded is `r state_most_num_injured`, with `r num_most_num_injured` victims reported injured. 
 
 ## Summary Table
 Sorts the whole dataset and groups it by states where mass shootings occured in the given year, providing a brief summary about the number of deaths, injuries, and total victims.
@@ -20,22 +20,26 @@ print.data.frame(summary_table)
 ```
 
 ## Description of a Particular Incident
+I decided to do some research on the "Thousand Oaks" incident that happened in `r state` located at `r address` on `r date`. There was a total number of `r impacted` victims impacted from this incident, with `r dead` reported dead and `r injured` reported injured. According to _The New York Times_, "The shooting inside the bar, a favorite local hangout for 25 years that hosted line-dancing lessons and allowed students in starting at 18, and where on Wednesday night several college women were celebrating their 21st birthdays, began around 11 p.m. Witnesses described sudden chaos. Among the estimated 130 to 180 people at the bar were five off-duty police officers, enjoying the night like the other partyers. As patrons dove for cover, the sounds of glass shattering and gunshots rang out in the cavernous bar. The gunman prowled the emptying dance floor, shooting the wounded as they lay on the ground". And as _USA Today_ stated, "The incident was also the deadliest mass shooting in the U.S. in 2018 since 17 classmates and teachers were gunned down at a Parkland, Florida, school on Valentine's Day".
+
+**SOURCES**
 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+USA Today: <https://www.usatoday.com/story/news/nation/2018/11/08/thousand-oaks-california-bar-shooting-307th-mass-shooting/1928574002/>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars, echo=FALSE}
-summary(cars)
-```
+The New York Times: <https://www.nytimes.com/2018/11/08/us/shooting-california-thousand-oaks.html>
 
-## Including Plots
+## Interactive Map 
+The purpose of including a map is to provide a better visual representation of where the mass shootings occured on the map accross the country in the given year. 
 
-You can also embed plots, for example:
+`r map`
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+From the interactive map, there were **more** mass shootings that happened on the **East** side of America in 2018. There were states that did not have any mass shootings reported at all in 2018 including Wyoming, Idaho, Montana and more, which a lot of these states are located on North side of America. 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Plot
+
+`r new_bar_chart`
+
+I chose to use a **bar chart** to present my findings collected from the data because it helps visualize which month in the given year has mass shootings that involved most victims, dead or injured. In the bar chart, it is clear that most victims were affected by mass shootings happened in June 2018, with a total of 257 victims. It is also pretty easy to see that there tends to be more victims involved in mass shootings in 2018 during the summertime (between Jun and Sep), as those 4 months all had more numbers of victims impacted from mass shootings.
